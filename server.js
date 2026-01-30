@@ -6,7 +6,7 @@ const connectDB = require("./config/db");
 const app = express();
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || "https://hrms-rnwy.vercel.app",
+  origin: process.env.CLIENT_URL || "https://hrms-eight-brown.vercel.app",
   credentials: true
 }));
 
