@@ -4,7 +4,12 @@ require("dotenv").config();
 const connectDB = require("./config/db");
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: process.env.CLIENT_URL || "https://hrms-rnwy.vercel.app",
+  credentials: true
+}));
+
 app.use(express.json());
 
 connectDB();
